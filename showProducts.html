@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/74285856ad.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #screen {
+            width: 80%;
+            height: 800px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            /* border: 1px solid black; */
+        }
+
+        #screen>div {
+            width: 18%;
+            height: 400px;
+            border: 1px solid red;
+            line-height: 8px;
+            margin-top: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #screen>div>img {
+            width: 100%;
+            height: 75%;
+        }
+
+        #screen>div>h1 {
+            font-size: 15px;
+        }
+
+        #screen>div>p {
+            font-size: 15px;
+        }
+
+        #screen-2 {
+            width: 100%;
+            /* border: 1px solid black; */
+            display: flex;
+        }
+
+        #sidebar {
+            height: 800px;
+            width: 20%;
+            border-right: 1px solid GREY;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        #sidebar>div {
+            border-bottom: 1px solid black;
+        }
+
+        #sidebar>ul>li {
+            list-style-type: none;
+            text-decoration: none;
+            font-size: 13px;
+            opacity: 0.9;
+
+        }
+
+        #sidebar1>ul>li {
+            list-style-type: none;
+            text-decoration: none;
+            font-size: 13px;
+            opacity: 0.9;
+
+        }
+
+        #sidebar2>ul>li {
+            list-style-type: none;
+            text-decoration: none;
+            font-size: 13px;
+            opacity: 0.9;
+
+        }
+
+        #sidebar3>ul>li {
+            list-style-type: none;
+            text-decoration: none;
+            font-size: 13px;
+            opacity: 0.9;
+
+        }
+
+        #navbar {
+            height: 70px;
+            width: 100%;
+            border-bottom: 1px solid black;
+            display: flex;
+            background-color: white;
+            /* position: fixed; */
+        }
+
+        #navbar>div:nth-child(1) {
+            height: 70px;
+            width: 10%;
+            /* border: 1px solid black; */
+            /* overflow: hidden; */
+
+        }
+
+        #navbar>div:nth-child(1)>img {
+            height: 50px;
+            width: 50px;
+            /* padding: 20px; */
+            /* float: center; */
+            margin-left: 50px;
+            margin-top: 10px;
+
+
+        }
+
+        #navbar>div:nth-child(2) {
+            height: 70px;
+            width: 40%;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-around;
+            /* margin-top:30px; */
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        #navbar>div:nth-child(2)>div {
+            margin-top: 20px;
+            font-size: small;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+        #navbar>div:nth-child(3) {
+            height: 70px;
+            width: 30%;
+            /* border: 1px solid black;  */
+
+        }
+
+        #navbar>div:nth-child(3)>input {
+            width: 80%;
+            height: 30px;
+            background-color: #f2f2f2;
+            margin-top: 20px;
+            border: none;
+            margin-left: 20px;
+        }
+
+        /* #navbar>div:nth-child(3)>i{
+    width:10%;
+    height: 30px;
+    background-color:#f2f2f2;
+    margin-top: 10px;
+} */
+        #navbar>div:nth-child(4) {
+            height: 70px;
+            width: 20%;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-evenly;
+
+
+        }
+
+        #navbar>div:nth-child(4)>div {
+            height: 50px;
+            width: 20%;
+            /* border: 1px solid black; */
+            margin-top: 10px;
+
+
+        }
+
+        #navbar>div:nth-child(4)>div>p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div><img src="./Myntra-icon-logo.svg"></diV>
+        <div>
+            <div>MEN</div>
+            <div>WOMEN</div>
+            <div>KIDS</div>
+            <div>HOME & LIVING</div>
+            <div>BEAUTY</div>
+            <div>STUDIO</div>
+        </div>
+        <div><input type="text" placeholder="Search for products,brands and more"> </div>
+        <div>
+            <div><i class="fa-solid fa-user"></i>
+                <p>Profile</p>
+            </div>
+            <div><i class="fa-regular fa-heart"></i>
+                <p>Wishlist</p>
+            </div>
+            <div><i class="fa-solid fa-bag-shopping"></i>
+                <p>Bag</p>
+            </div>
+
+        </div>
+    </div>
+    <div id="screen-2">
+        <div id="sidebar">
+            <h4>Men T-Shirts
+                - 77888 items</h4>
+            <div id="sidebar1">
+                <h4>FILTERS</h4>
+                <ul>
+                    <h4>CATEGORIES
+                    </h4>
+                    <li><input type="checkbox" />Tshirts(77083)</li>
+                    <li><input type="checkbox" />Lounge Tshirts(788)</li>
+                </ul>
+            </div>
+            <div id="sidebar2">
+                <ul>
+                    <h4>BRAND</h4>
+                    <li><input type="checkbox" />Roadster(3682)</li>
+                    <li><input type="checkbox" />U.S. Polo Assn.(1379)</li>
+                    <li><input type="checkbox" />HRX by Hrithik Roshan(1284)</li>
+                    <li><input type="checkbox" />Tommy Hilfiger(1239)</li>
+                    <li><input type="checkbox" />Jack & Jones(1214)</li>
+                    <li><input type="checkbox" />WROGN(1208)</li>
+                    <li><input type="checkbox" />Puma(1155)</li>
+                </ul>
+            </div>
+            <div id="sidebar3">
+                <ul>
+                    <h4>PRICE</h4>
+                    <li><input type="checkbox" />Rs. 299 to Rs. 1462(2904)</li>
+                    <li><input type="checkbox" />Rs. 1462 to Rs. 2625(993)</li>
+                    <li><input type="checkbox" />Rs. 2625 to Rs. 3788(74)</li>
+                    <li><input type="checkbox" />Rs. 3788 to Rs. 4951(13)</li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div id="screen">
+
+        </div>
+
+        <div></div>
+    </div>
+    <script src="./showProducts.JS"></script>
+</body>
+
+</html>

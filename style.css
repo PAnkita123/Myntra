@@ -366,7 +366,7 @@ h3{
 #div-6>div{height: 350px;
     width:14%;
     border: 1px solid grey;
-    line-height: 4px;
+    line-height: 20px;
   
 
 }
@@ -505,4 +505,15 @@ ul li{
 #image>img{
     height:100%;
     width: 100%;
+}
+
+#change{
+    height:310px;
+    width:330px;
+    /* border:1px solid grey; */
+    margin-left: 40%;
+    padding: 20px;
+    line-height: 20px;
+    background-color: white;
+    
 }

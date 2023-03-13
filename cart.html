@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #cart>div{height:200px;
+            width:20%;
+            border:1px solid black;
+
+        } */
+
+        #cart>img{
+            height:400px;
+            width:100%;
+        }
+
+        #cart{
+            height:500px;
+            width:30%;
+            border:1px solid black;
+            line-height: 10px;
+           
+        }
+        #cartProducts2{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Cart</h1>
+        <!-- <button onclick="logout()">logout</button> -->
+    <!-- </div> -->
+    <div id="cartProducts2">
+
+    </div>
+    <button onclick="buyProducts()">Buy Product</button>
+    <script>
+        window.onload=function(){
+            var dataFromLS=JSON.parse(localStorage.getItem("myntraUser"));
+            if(!dataFromLS){
+                window.location.href="/login.html"
+                alert("Can't access cart without login, please login first!")
+            }else{
+                var dataFromLS=JSON.parse(localStorage.getItem("userData2"));
+                var currentUser=JSON.parse(localStorage.getItem("myntraUser"));
+                var divFromHtml=document.getElementById("cartProducts2");
+                var cartProducts2;
+                var flag=false;
+                for(var i=0;i<dataFromLS.length;i++){
+                    if(dataFromLS[i].email===currentUser["current-user-email"] && dataFromLS[i].cartProducts2){
+                        cartProducts2=dataFromLS[i].cartProducts2;
+                        flag=true;
+                    }
+
+                }if(flag===false){
+                    alert("No products added to cart, go and buy some products!")
+                }else{
+                    console.log(cartProducts2,'cartProducts')
+                    var productswithHTML=[];
+                    for(var i=0;i<cartProducts2.length;i++){
+
+                        productswithHTML+=`<div id="cart"><img src="${cartProducts2[i].image}"><br/><br/><h4>${cartProducts2[i].name}</h4><br/><p>${cartProducts2[i].price}</p></div>`
+                        
+                    }
+                    divFromHtml.innerHTML=productswithHTML;
+                }
+
+            }
+        }
+
+        function buyProducts(){
+            var dataFromLS=JSON.parse(localStorage.getItem("userData2"));
+            var currentUser=JSON.parse(localStorage.getItem("myntraUser"));
+
+            var updatedUser=[];
+
+            for (var i=0;i<dataFromLS.length;i++){
+                if(dataFromLS[i].email===currentUser["current-user-email"] && dataFromLS[i].cartProducts2){
+                dataFromLS[i].cartProducts2=[];
+                updatedUser.push(dataFromLS[i])
+            }else{
+                updatedUser.push(dataFromLS[i])
+            }
+
+        }
+        console.log(updatedUser,"updatedUser")
+        localStorage.setItem("userData",JSON.stringify(updatedUser));       
+        alert("Products will deliver soon.")
+        window.location.href="/index.html"
+    }
+    </script>
+
+    
+   
+</body>
+</html>
